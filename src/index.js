@@ -21,10 +21,12 @@ function onMenuEl(menuFood) {
 
 refs.checkbox.addEventListener('change', onChangeTheme);
 
-refs.body.classList.add(refs.savedTheme);
 
-if (refs.savedTheme === Theme.DARK) { 
-    refs.checkbox.checked = true;
+if (refs.savedTheme) {
+refs.body.classList.add(refs.savedTheme);
+if (refs.savedTheme === Theme.DARK) {
+refs.checkbox.checked = true;
+}
 }
 
 function onChangeTheme(e) {
